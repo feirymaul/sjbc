@@ -12,8 +12,7 @@ export function VisitSection({ infoBullets, mapSrc }: VisitSectionProps) {
         <p className={styles.cardLabel}>Visit</p>
         <h2 className={styles.sectionHeading}>Plan your first Sunday</h2>
         <p className={styles.sectionText}>
-          San Juan Baptist Church, Maite, San Juan, Siquijor · Free parking lot and ADA entrances
-          available. Arrive a few minutes early to grab some coffee.
+          San Juan Baptist Church, Maite, San Juan, Siquijor · Arrive a few minutes early to meet our welcome team, get settled, and share coffee or snacks.
         </p>
         <ul className={styles.infoList}>
           {infoBullets.map((bullet) => (
