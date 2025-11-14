@@ -1,0 +1,461 @@
+.page {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 2rem 1.5rem 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: var(--navy);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.hero {
+  background: linear-gradient(135deg, #fffdf6, #fde6c8, #fde68a);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.heroContent {
+  text-align: left;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  border-radius: 999px;
+  border: 2px solid rgba(15, 23, 42, 0.15);
+}
+
+.logoLabel {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.7rem;
+  color: var(--slate);
+}
+
+.churchTitle {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.churchTitleAccent {
+  display: block;
+  font-weight: 400;
+  font-size: 2.25rem;
+  color: var(--accent);
+}
+
+.churchSubtitle {
+  margin: 0.3rem 0 0;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+}
+
+.tagline {
+  font-size: 2.75rem;
+  margin: 0.5rem 0;
+}
+
+.subheading {
+  margin: 0.75rem 0 1.25rem;
+  color: var(--slate);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.button {
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 15px 30px -18px rgba(15, 23, 42, 0.45);
+}
+
+.buttonPrimary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.buttonSecondary {
+  background: var(--accent-soft);
+  color: var(--navy);
+}
+
+.heroCard {
+  background: var(--sand);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 20px 55px -35px rgba(15, 23, 42, 0.65);
+}
+
+.heroCardLabel {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+  color: rgba(15, 23, 42, 0.55);
+}
+
+.heroCardTime {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.heroCardNote {
+  color: var(--slate);
+  margin: 0.75rem 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #fff;
+  box-shadow: 0 10px 40px -30px rgba(15, 23, 42, 0.6);
+  flex-wrap: wrap;
+  position: sticky;
+  top: 1rem;
+  z-index: 10;
+}
+
+.navLogoText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.navMiniTitle {
+  margin: 0;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.navMiniMeta {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--slate);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.navActions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.section {
+  background: var(--sand);
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  box-shadow: 0 10px 35px -25px rgba(15, 23, 42, 0.5);
+}
+
+.sectionHeading {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+}
+
+.sectionText {
+  margin: 0 0 1.5rem;
+  color: var(--slate);
+}
+
+.highlightGrid,
+.beliefGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.highlightCard,
+.beliefCard,
+.scheduleCard {
+  border: 1px solid rgba(217, 119, 6, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background: var(--soft-card);
+}
+
+.cardLabel {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.65rem;
+  color: rgba(15, 23, 42, 0.45);
+  margin-bottom: 0.6rem;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.cardBody {
+  margin: 0.6rem 0 0;
+  color: var(--slate);
+}
+
+.scheduleList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.scheduleRange {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+.eventsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.eventCard {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  background: var(--soft-card);
+}
+
+.eventDate {
+  min-width: 64px;
+  text-align: center;
+  background: #fff;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(217, 119, 6, 0.35);
+  padding: 0.5rem;
+}
+
+.eventMonth {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.eventDay {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.visitSection {
+  background: var(--sand);
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  box-shadow: 0 10px 35px -25px rgba(15, 23, 42, 0.5);
+}
+
+.infoList {
+  margin: 1rem 0 0;
+  padding-left: 1.25rem;
+  color: var(--slate);
+}
+
+.visitCard {
+  border: 1px solid rgba(217, 119, 6, 0.3);
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  background: var(--soft-card);
+}
+
+.link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.mapWrapper {
+  margin-top: 1.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(217, 119, 6, 0.25);
+}
+
+.map {
+  border: 0;
+  width: 100%;
+}
+
+.ctaSection {
+  background: linear-gradient(120deg, #0b1a2b, #132f3b);
+  color: #fff;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.ctaHeading {
+  margin: 0 0 0.75rem;
+  font-size: 2rem;
+}
+
+.ctaText {
+  margin: 0 0 1.5rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  border-top: 1px solid rgba(15, 23, 42, 0.1);
+  padding-top: 2rem;
+}
+
+.footerColumn {
+  background: var(--soft-card);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(217, 119, 6, 0.15);
+}
+
+.footerBrand {
+  margin: 0;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.footerHeading {
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.footerText {
+  margin: 0.25rem 0;
+  color: var(--slate);
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.footerLink {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.pastorSection {
+  background: var(--sand);
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  box-shadow: 0 10px 35px -25px rgba(15, 23, 42, 0.5);
+}
+
+.pastorImageWrapper {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  border: 1px solid rgba(217, 119, 6, 0.2);
+  max-height: 420px;
+}
+
+.pastorImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .nav {
+    position: static;
+  }
+
+  .hero {
+    padding: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions > * {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navActions,
+  .navLinks {
+    justify-content: center;
+  }
+
+  .heroCard {
+    order: 2;
+  }
+
+  .pastorSection {
+    padding: 2rem;
+  }
+}
