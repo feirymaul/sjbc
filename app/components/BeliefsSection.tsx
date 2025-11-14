@@ -6,18 +6,16 @@ export interface BeliefStatement {
 }
 
 interface BeliefsSectionProps {
+  heading?: string;
+  intro?: string;
   statements: BeliefStatement[];
 }
 
-export function BeliefsSection({ statements }: BeliefsSectionProps) {
+export function BeliefsSection({ heading = "What We Believe", intro, statements }: BeliefsSectionProps) {
   return (
     <section id="beliefs" className={styles.section}>
-      <h2 className={styles.sectionHeading}>What We Believe</h2>
-      <p className={styles.sectionText}>
-        San Juan Baptist Church is joyfully Reformed Baptist, confessing the 1689 London Baptist
-        Confession to summarize what Scripture teaches about God, salvation, the church, and the hope
-        of Christ’s return.
-      </p>
+      <h2 className={styles.sectionHeading}>{heading}</h2>
+      {intro && <p className={styles.sectionText}>{intro}</p>}
       <div className={styles.beliefGrid}>
         {statements.map((belief) => (
           <article key={belief.title} className={styles.beliefCard}>
