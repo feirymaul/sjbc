@@ -12,7 +12,7 @@ interface NavBarProps {
 export function NavBar({ links }: NavBarProps) {
   return (
     <header className={styles.header}>
-      <div className={styles.nav}>
+      <div className={`${styles.nav}`}>
         <div className={styles.navLogoText}>
           <p className={styles.navMiniTitle}>San Juan Baptist Church</p>
           <p className={styles.navMiniMeta}>Maite · San Juan · Siquijor</p>

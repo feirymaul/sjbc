@@ -19,16 +19,16 @@ const navLinks = [
 
 const highlightItems: HighlightItem[] = [
   {
-    title: "Lord's Day Worship",
-    subtitle: "10:50am Sanctuary",
-    description:
-      "Word-centered liturgy with congregational singing, expositional preaching, and weekly pastoral prayer.",
-  },
-  {
     title: "Catechism Classes",
     subtitle: "9:30am Sunday School",
     description:
       "Children, youth, and adults walk through the New City and Baptist catechisms with discussion and prayer.",
+  },
+  {
+    title: "Lord's Day Worship",
+    subtitle: "10:50am Sanctuary",
+    description:
+      "Word-centered liturgy with congregational singing, expositional preaching, and weekly pastoral prayer.",
   },
   {
     title: "Midweek Prayer",
@@ -71,7 +71,7 @@ const weeklySchedule: ScheduleBlock[] = [
 
 const upcomingEvents: EventItem[] = [
   {
-    date: "Dec 15",
+    date: "Dec NA",
     title: "Church Christmas Party",
     detail:
       "Evening of carols, testimony sharing, and potluck dinner at the church courtyard. Invite friends and neighbors.",
@@ -87,7 +87,7 @@ const beliefStatements: BeliefStatement[] = [
   {
     title: "Triune God",
     description:
-      "We worship the one living and true God—Father, Son, and Holy Spirit—eternal, sovereign, holy, and worthy of all glory, as confessed in the first chapters of the 1689 confession.",
+      "We worship the one living and true God in three persons: Father, Son, and Holy Spirit. He is eternal, sovereign, holy, and worthy of all glory.",
   },
   {
     title: "Sovereign Grace",
@@ -112,10 +112,8 @@ const beliefStatements: BeliefStatement[] = [
 ];
 
 const visitInfoBullets = [
-  "Kids ministry for nursery through 8th grade.",
-  "Live Cebuano/English preaching with headsets for hearing assistance.",
   "Preaching in Cebuano with English woven throughout.",
-  "Prayer team available after each gathering.",
+  "Lunch fellowship available every last week of the month.",
 ];
 
 export default function Home() {
@@ -126,14 +124,18 @@ export default function Home() {
         subheading="We are a multigenerational church practicing the way of Jesus in San Juan through meaningful worship, community, and everyday mission."
       />
       <NavBar links={navLinks} />
-      <BeliefsSection statements={beliefStatements} />
+      <BeliefsSection
+        heading="What We Believe"
+        intro="San Juan Baptist Church is joyfully Reformed Baptist, upholding the 1689 London Baptist Confession of Faith."
+        statements={beliefStatements}
+      />
       <HighlightsSection items={highlightItems} />
       <ScheduleSection schedule={weeklySchedule} />
       <EventsSection events={upcomingEvents} />
       <PastorSection
         name="Pastor Ramir"
         wifeName="Ellen"
-        description="Pastor Ramir and Ellen have served SJBC for over two decades—shepherding through expositional preaching, counseling families, and leading island outreach together."
+        description="Pastor Ramir and Ellen have served SJBC for over two decades. Shepherding through expositional preaching, counseling families, and leading island outreach together."
         imageSrc="/pastor-and-wife-cropped.jpg"
       />
       <VisitSection
