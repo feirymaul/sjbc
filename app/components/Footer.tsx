@@ -15,7 +15,7 @@ export function Footer({ navLinks }: FooterProps) {
       <div className={styles.footerColumn}>
         <p className={styles.footerBrand}>San Juan Baptist Church</p>
         <p className={styles.footerText}>
-          Reformed Baptist fellowship serving the whole island of Siquijor.
+          Baptist fellowship serving the whole island of Siquijor.
         </p>
         <p className={styles.footerText}>5F4W+855 · Maite, San Juan, Siquijor</p>
       </div>

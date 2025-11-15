@@ -123,16 +123,16 @@ const featuredEvent = upcomingEvents[0];
 
 const pastEvents = [
   {
-    date: "Dec 29, 2024",
-    title: "Couple's Night",
-    description: "An evening of fellowship, encouragement, and prayer for marriages across our church family.",
-    imageSrc: "/couples-night-2024.png",
+    date: "Sep 23, 2025",
+    title: "Women's Fellowship",
+    description: "A gathering designed to encourage, strengthen, and equip women to grow in Christ and in fellowship with one another.",
+    imageSrc: "/womens-fellowship-2025.jpg",
   },
   {
-    date: "Feb 17, 2025",
-    title: "Medical & Dental Mission",
-    description: "Grace Bible Church International's mission to serve our community with free medical and dental care hosted at SJBC.",
-    imageSrc: "/medical-mission-2025-v2.png",
+    date: "May 24, 2025",
+    title: "Summer Youth Camp",
+    description: "Three days of worship, study, games, friendships, and unforgettable moments as we draw near to God who has made Himself known through His Word.",
+    imageSrc: "/summer-youth-camp-2025.jpg",
   },
   {
     date: "Apr 27, 2025",
@@ -140,25 +140,21 @@ const pastEvents = [
     description: "With Guest Speaker Ptr. Joebel Casiple from Talibon Baptist Church.",
     imageSrc: "/21st-church-anniversary-v3.jpg",
   },
-  {
-    date: "May 24, 2025",
-    title: "Summer Youth Camp 2025",
-    description: "Three days of worship, study, games, friendships, and unforgettable moments as we draw near to God who has made Himself known through His Word.",
-    imageSrc: "/summer-youth-camp-2025.jpg",
+    {
+  date: "Feb 17, 2025",
+    title: "Medical & Dental Mission",
+    description: "Grace Bible Church International's mission to serve our community with free medical and dental care hosted at SJBC.",
+    imageSrc: "/medical-mission-2025-v2.png",
   },
   {
-    date: "Sep 23, 2025",
-    title: "Women's Fellowship 2025",
-    description: "A gathering designed to encourage, strengthen, and equip women to grow in Christ and in fellowship with one another.",
-    imageSrc: "/womens-fellowship-2025.jpg",
+    date: "Dec 29, 2024",
+    title: "Couple's Night",
+    description: "An evening of fellowship, encouragement, and prayer for marriages across our church family.",
+    imageSrc: "/couples-night-2024.png",
   },
 ];
 
 const faqItems = [
-  {
-    question: "What does it mean that you are Baptist?",
-    answer: "It means we welcome believers who place their faith in Christ, and we baptize those who profess that faith as a public declaration that they belong to Him and to His people.",
-  },
   {
     question: "What language do you use during services?",
     answer: "Most of our gathering is in Cebuano with English woven throughout.",
@@ -168,7 +164,7 @@ const faqItems = [
     answer: "We sing from the traditional Trinity Hymnal in English alongside other scripture-rich songs. We also explain gospel-centered lyrics so everyone can worship together.",
   },
   {
-    question: "Do I need to know theology or TULIP to attend?",
+    question: "Do I need to know theology to attend?",
     answer: "No. We aim to teach the Bible in simple, everyday language. You will hear terms explained, and you can ask questions anytime in our classes or over coffee.",
   },
   {
