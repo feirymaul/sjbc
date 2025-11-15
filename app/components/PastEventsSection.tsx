@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "../home.module.css";
 
 interface PastEvent {
@@ -19,15 +19,6 @@ export function PastEventsSection({ events }: PastEventsSectionProps) {
   const [index, setIndex] = useState(0);
   const hasEvents = events.length > 0;
 
-  useEffect(() => {
-    if (!hasEvents) return;
-    if (events.length < 2) return;
-    const timer = setInterval(() => {
-      setIndex((prev) => (prev === events.length - 1 ? 0 : prev + 1));
-    }, 6000);
-    return () => clearInterval(timer);
-  }, [events.length, hasEvents]);
-
   if (!hasEvents) return null;
 
   const safeIndex = index % events.length;
@@ -35,13 +26,6 @@ export function PastEventsSection({ events }: PastEventsSectionProps) {
 
   const goPrev = () => setIndex((prev) => (prev === 0 ? events.length - 1 : prev - 1));
   const goNext = () => setIndex((prev) => (prev === events.length - 1 ? 0 : prev + 1));
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIndex((prev) => (prev === events.length - 1 ? 0 : prev + 1));
-    }, 6000);
-    return () => clearInterval(timer);
-  }, [events.length]);
 
   return (
     <section className={styles.section} id="past-events">
@@ -53,14 +37,14 @@ export function PastEventsSection({ events }: PastEventsSectionProps) {
         <button type="button" className={styles.pastNav} onClick={goPrev} aria-label="Previous event">
           ‹
         </button>
-        <article key={current.title} className={styles.pastEventCard}>
-          <Image
-            src={current.imageSrc}
-            alt={current.title}
-            width={1200}
-            height={750}
-            className={styles.pastEventImage}
-            priority
+          <article key={current.title} className={styles.pastEventCard}>
+            <Image
+              src={current.imageSrc}
+              alt={current.title}
+              width={1200}
+              height={750}
+              className={styles.pastEventImage}
+              loading="lazy"
           />
           <div className={styles.pastEventBody}>
             <p className={styles.pastEventDate}>{current.date}</p>
