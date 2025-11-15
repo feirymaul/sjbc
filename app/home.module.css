@@ -622,4 +622,23 @@
   .pastorSection {
     padding: 2rem;
   }
+
+  .pastCarousel {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .pastNav {
+    width: 36px;
+    height: 36px;
+    justify-self: center;
+  }
+
+  .pastEventImage {
+    height: 240px;
+  }
+
+  .pastDots {
+    justify-content: center;
+  }
 }

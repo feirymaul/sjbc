@@ -4,10 +4,12 @@ import { BeliefsSection, BeliefStatement } from "./components/BeliefsSection";
 import { HighlightsSection, HighlightItem } from "./components/HighlightsSection";
 import { ScheduleSection, ScheduleBlock } from "./components/ScheduleSection";
 import { EventsSection, EventItem } from "./components/EventsSection";
+import { PastEventsSection } from "./components/PastEventsSection";
 import { VisitSection } from "./components/VisitSection";
 import { CTASection } from "./components/CTASection";
 import { Footer } from "./components/Footer";
 import { PastorSection } from "./components/PastorSection";
+import { FAQSection } from "./components/FAQSection";
 import styles from "./home.module.css";
 
 const navLinks = [
@@ -46,21 +48,21 @@ const highlightItems: HighlightItem[] = [
 
 const weeklySchedule: ScheduleBlock[] = [
   {
-    range: "9:30 – 10:40am",
+    range: "9:30 - 10:40am",
     title: "Sunday School",
     description:
       "Kids, students, and adults working through catechism, scripture memory, and prayer in age-specific classes.",
   },
   {
-    range: "10:40 – 10:50am",
+    range: "10:40 - 10:50am",
     title: "Courtyard Break",
-    description: "Coffee, cassava cake, and conversation before we gather for corporate worship.",
+    description: "Coffee, bread, and conversation before we gather for corporate worship.",
   },
   {
-    range: "10:50am – 12:00pm",
+    range: "10:50am - 12:00pm",
     title: "Worship Service",
     description:
-      "Call to worship, psalms and hymns, expositional preaching, and the Lord's Supper on the first Sunday.",
+      "Call to worship, psalms and hymns, expositional preaching.",
   },
   {
     range: "3:00pm Wednesdays",
@@ -92,7 +94,7 @@ const beliefStatements: BeliefStatement[] = [
   {
     title: "Sovereign Grace",
     description:
-      "Salvation is accomplished by grace alone through faith alone in Christ alone, as the Spirit effectually calls, regenerates, and keeps His people.",
+      "Salvation is God's gift, by grace through faith in Christ alone, and He invites all people to repent, believe, and follow Jesus.",
   },
   {
     title: "The Church",
@@ -102,7 +104,7 @@ const beliefStatements: BeliefStatement[] = [
   {
     title: "Ordinances",
     description:
-      "We observe the two ordinances given by Christ-believer's baptism and the Lord's Supper as visible signs of the gospel and membership in the body.",
+      "We observe the ordinances given by Christ. Baptism is a public declaration that you belong to Jesus, and the Lord's Supper is a reminder of His finished work.",
   },
   {
     title: "Mission & Hope",
@@ -112,21 +114,97 @@ const beliefStatements: BeliefStatement[] = [
 ];
 
 const visitInfoBullets = [
-  "Preaching in Cebuano with English woven throughout.",
-  "Lunch fellowship available every last week of the month.",
+  "Main gathering in Cebuano with English woven throughout.",
+  "Plan for a relaxed, family-friendly environment with kids.",
+  "Next celebration of the Lord's Supper will be announced soon.",
+];
+
+const featuredEvent = upcomingEvents[0];
+
+const pastEvents = [
+  {
+    date: "Dec 29, 2024",
+    title: "Couple's Night",
+    description: "An evening of fellowship, encouragement, and prayer for marriages across our church family.",
+    imageSrc: "/couples-night-2024.png",
+  },
+  {
+    date: "Feb 17, 2025",
+    title: "Medical & Dental Mission",
+    description: "Grace Bible Church International's mission to serve our community with free medical and dental care hosted at SJBC.",
+    imageSrc: "/medical-mission-2025-v2.png",
+  },
+  {
+    date: "Apr 27, 2025",
+    title: "21st Church Anniversary",
+    description: "With Guest Speaker Ptr. Joebel Casiple from Talibon Baptist Church.",
+    imageSrc: "/21st-church-anniversary-v3.jpg",
+  },
+  {
+    date: "May 24, 2025",
+    title: "Summer Youth Camp 2025",
+    description: "Three days of worship, study, games, friendships, and unforgettable moments as we draw near to God who has made Himself known through His Word.",
+    imageSrc: "/summer-youth-camp-2025.jpg",
+  },
+  {
+    date: "Sep 23, 2025",
+    title: "Women's Fellowship 2025",
+    description: "A gathering designed to encourage, strengthen, and equip women to grow in Christ and in fellowship with one another.",
+    imageSrc: "/womens-fellowship-2025.jpg",
+  },
+];
+
+const faqItems = [
+  {
+    question: "What does it mean that you are Baptist?",
+    answer: "It means we welcome believers who place their faith in Christ, and we baptize those who profess that faith as a public declaration that they belong to Him and to His people.",
+  },
+  {
+    question: "What language do you use during services?",
+    answer: "Most of our gathering is in Cebuano with English woven throughout.",
+  },
+  {
+    question: "What kind of worship music should I expect?",
+    answer: "We sing from the traditional Trinity Hymnal in English alongside other scripture-rich songs. We also explain gospel-centered lyrics so everyone can worship together.",
+  },
+  {
+    question: "Do I need to know theology or TULIP to attend?",
+    answer: "No. We aim to teach the Bible in simple, everyday language. You will hear terms explained, and you can ask questions anytime in our classes or over coffee.",
+  },
+  {
+    question: "What should I wear and how long is the service?",
+    answer: "Wear something modest and God-honoring; people range from casual to dressy. Sunday worship lasts about 70 minutes with singing, prayer, scripture, and preaching.",
+  },
+  {
+    question: "How do you care for kids and youth?",
+    answer: "We offer age-appropriate Sunday School, catechism classes, and a safe space for kids during the sermon. Families are also encouraged to worship together.",
+  },
+  {
+    question: "How can I get connected?",
+    answer: "Stay for lunch on the last Sunday of the month, join a prayer gathering, or talk with Pastor Ramir and the elders about baptism, membership, or community groups.",
+  },
 ];
 
 export default function Home() {
   return (
     <main className={styles.page}>
+      <NavBar links={navLinks} />
       <Hero
         tagline="Hope for every neighbor on the island."
-        subheading="We are a multigenerational church practicing the way of Jesus in San Juan through meaningful worship, community, and everyday mission."
+        subheading="We are neighbors, families, and friends learning to follow Jesus together through scripture, prayer, hospitality, and service across San Juan."
+        cardLabel={featuredEvent ? "Upcoming Event" : "This Sunday"}
+        cardTitle={featuredEvent ? `${featuredEvent.date} · ${featuredEvent.title}` : "9:30am · Maite, San Juan"}
+        cardNote={
+          featuredEvent
+            ? featuredEvent.detail
+            : "Kids check-in opens at 9:15am. Livestream option coming soon for those joining online."
+        }
+        cardLinkHref="#visit"
+        cardLinkText={featuredEvent ? "See visit details →" : "All gathering details →"}
       />
-      <NavBar links={navLinks} />
       <BeliefsSection
         heading="What We Believe"
-        intro="San Juan Baptist Church is joyfully Reformed Baptist, upholding the 1689 London Baptist Confession of Faith."
+        intro="San Juan Baptist Church is a Bible-loving, Christ-centered family. We uphold the 1689 London Baptist Confession because it helps us explain the timeless truths of Scripture in everyday life."
         statements={beliefStatements}
       />
       <HighlightsSection items={highlightItems} />
@@ -135,9 +213,11 @@ export default function Home() {
       <PastorSection
         name="Pastor Ramir"
         wifeName="Ellen"
-        description="Pastor Ramir and Ellen have served SJBC for over two decades. Shepherding through expositional preaching, counseling families, and leading island outreach together."
-        imageSrc="/pastor-and-wife-cropped.jpg"
+        description="Pastor Ramir and Ellen have served SJBC for over three decades. Shepherding through expositional preaching, counseling families, and leading island outreach together."
+        imageSrc="/pastor-and-wife.jpg"
       />
+      <PastEventsSection events={pastEvents} />
+      <FAQSection items={faqItems} />
       <VisitSection
         infoBullets={visitInfoBullets}
         mapSrc="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15906.059165699876!2d123.4770338!3d9.1557712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33ab3f00038814eb%3A0x8fcb065f94930087!2sSan%20Juan%20Baptist%20Church!5e0!3m2!1sen!2sph!4v1700000000000!5m2!1sen!2sph"

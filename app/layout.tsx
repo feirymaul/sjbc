@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "San Juan Baptist Church",
   description:
-    "San Juan Baptist Church in Maite, San Juan, Siquijor — a Reformed Baptist congregation preaching Christ and holding to the 1689 confession.",
+    "San Juan Baptist Church in Maite, San Juan, Siquijor - a Baptist congregation preaching Christ and holding to the 1689 confession.",
 };
 
 export default function RootLayout({

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "../home.module.css";
 
 interface NavLink {
@@ -12,10 +13,13 @@ interface NavBarProps {
 export function NavBar({ links }: NavBarProps) {
   return (
     <header className={styles.header}>
-      <div className={`${styles.nav}`}>
+      <div className={styles.nav}>
         <div className={styles.navLogoText}>
-          <p className={styles.navMiniTitle}>San Juan Baptist Church</p>
-          <p className={styles.navMiniMeta}>Maite · San Juan · Siquijor</p>
+          <Image src="/sjbc-logo.png" alt="SJBC logo" width={48} height={48} className={styles.navLogo} />
+          <div>
+            <p className={styles.navMiniTitle}>San Juan Baptist Church</p>
+            <p className={styles.navMiniMeta}>Maite · San Juan · Siquijor</p>
+          </div>
         </div>
         <nav className={styles.navLinks}>
           {links.map((link) => (
@@ -24,14 +28,6 @@ export function NavBar({ links }: NavBarProps) {
             </a>
           ))}
         </nav>
-        <div className={styles.navActions}>
-          <a href="#visit" className={`${styles.button} ${styles.buttonPrimary}`}>
-            Plan a Visit
-          </a>
-          <a href="#contact" className={`${styles.button} ${styles.buttonSecondary}`}>
-            Contact
-          </a>
-        </div>
       </div>
     </header>
   );
