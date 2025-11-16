@@ -1,22 +1,20 @@
 import { Hero } from "./components/Hero";
 import { NavBar } from "./components/NavBar";
 import { BeliefsSection, BeliefStatement } from "./components/BeliefsSection";
-import { HighlightsSection, HighlightItem } from "./components/HighlightsSection";
-import { ScheduleSection, ScheduleBlock } from "./components/ScheduleSection";
-import { EventsSection, EventItem } from "./components/EventsSection";
+import { LifeSection, HighlightItem, ScheduleBlock } from "./components/LifeSection";
+import { EventItem } from "./components/EventsSection";
 import { PastEventsSection } from "./components/PastEventsSection";
 import { VisitSection } from "./components/VisitSection";
-import { CTASection } from "./components/CTASection";
 import { Footer } from "./components/Footer";
 import { PastorSection } from "./components/PastorSection";
 import { FAQSection } from "./components/FAQSection";
 import styles from "./home.module.css";
 
 const navLinks = [
-  { label: "Life at SJBC", href: "#life" },
+  { label: "Life & Schedule", href: "#life" },
   { label: "Beliefs", href: "#beliefs" },
-  { label: "Schedule", href: "#schedule" },
   { label: "Visit", href: "#visit" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 const highlightItems: HighlightItem[] = [
@@ -198,27 +196,26 @@ export default function Home() {
         cardLinkHref="#visit"
         cardLinkText={featuredEvent ? "See visit details →" : "All gathering details →"}
       />
+      <PastEventsSection events={pastEvents} />
       <BeliefsSection
         heading="What We Believe"
         intro="San Juan Baptist Church is a Bible-loving, Christ-centered family. We uphold the 1689 London Baptist Confession because it helps us explain the timeless truths of Scripture in everyday life."
         statements={beliefStatements}
       />
-      <HighlightsSection items={highlightItems} />
-      <ScheduleSection schedule={weeklySchedule} />
-      <EventsSection events={upcomingEvents} />
+      <LifeSection highlights={highlightItems} schedule={weeklySchedule} />
+      {/*<EventsSection events={upcomingEvents} />*/}
+      <FAQSection items={faqItems} />
       <PastorSection
         name="Pastor Ramir"
         wifeName="Ellen"
         description="Pastor Ramir and Ellen have served SJBC for over three decades. Shepherding through expositional preaching, counseling families, and leading island outreach together."
         imageSrc="/pastor-and-wife.jpg"
       />
-      <PastEventsSection events={pastEvents} />
-      <FAQSection items={faqItems} />
       <VisitSection
         infoBullets={visitInfoBullets}
         mapSrc="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15906.059165699876!2d123.4770338!3d9.1557712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33ab3f00038814eb%3A0x8fcb065f94930087!2sSan%20Juan%20Baptist%20Church!5e0!3m2!1sen!2sph!4v1700000000000!5m2!1sen!2sph"
       />
-      <CTASection />
+      {/*<CTASection />*/}
       <Footer navLinks={navLinks} />
     </main>
   );
