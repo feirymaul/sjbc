@@ -81,27 +81,20 @@ const upcomingEvents: EventItem[] = [
 ];
 
 const quickInfoItems: QuickInfoItem[] = [
-  {
-    label: "This Sunday",
-    title: "10:50am Worship",
-    description: "Arrive by 10:35am for coffee, courtyard greetings, and kids check-in.",
-    href: "#visit",
-    linkText: "Plan your visit →",
-  },
-  {
-    label: "Prayer & Care",
-    title: "Message the pastors",
-    description: "Share a prayer request or ask a question anytime. We reply within a day.",
-    href: "mailto:sjbcsiquijor@gmail.com",
-    linkText: "Email us →",
-  },
-  {
-    label: "Find Us",
-    title: "Maite, San Juan",
-    description: "Right along the national road beside the municipal gym. Parking on-site.",
-    href: "https://maps.app.goo.gl/8UcU8Jx3vsFrDwLu9",
-    linkText: "Open map →",
-  },
+  // {
+  //   label: "Prayer & Care",
+  //   title: "Message the pastor",
+  //   description: "Share a prayer request or ask a question anytime.",
+  //   href: "mailto:sjbcsiquijor@gmail.com",
+  //   linkText: "Email us →",
+  // },
+  // {
+  //   label: "Find Us",
+  //   title: "Maite, San Juan",
+  //   description: "Beside old municipal cemetery",
+  //   href: "https://maps.app.goo.gl/8UcU8Jx3vsFrDwLu9",
+  //   linkText: "Open map →",
+  // },
 ];
 
 const beliefStatements: BeliefStatement[] = [
