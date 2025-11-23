@@ -145,14 +145,6 @@ const visitInfoBullets = [
 
 const featuredEvent = upcomingEvents[0];
 
-const navInfo = featuredEvent
-  ? {
-      message: `${featuredEvent.date} · ${featuredEvent.title}`,
-      linkText: "Details →",
-      linkHref: "#visit",
-    }
-  : null;
-
 const pastEvents = [
   {
     date: "Sep 23, 2025",
@@ -216,12 +208,7 @@ const faqItems = [
 export default function Home() {
   return (
     <main className={styles.page}>
-      <NavBar
-        links={navLinks}
-        infoMessage={navInfo?.message}
-        infoLinkText={navInfo?.linkText}
-        infoLinkHref={navInfo?.linkHref}
-      />
+      <NavBar links={navLinks} />
       <Hero
         tagline="Hope for every neighbor on the island."
         subheading="We are neighbors, families, and friends learning to follow Jesus together through scripture, prayer, hospitality, and service across San Juan."
