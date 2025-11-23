@@ -71,10 +71,10 @@ const weeklySchedule: ScheduleBlock[] = [
 
 const upcomingEvents: EventItem[] = [
   {
-    date: "Dec NA",
-    title: "Church Christmas Party",
+    date: "Dec 21",
+    title: "Christmas Party",
     detail:
-      "Evening of carols, testimony sharing, and potluck dinner at the church courtyard. Invite friends and neighbors.",
+      "Following our worship service we'll have our christmas party for carols, testimony sharing, and a joyful dinner with the whole church family. Invite friends and neighbors.",
   },
 ];
 
