@@ -73,10 +73,10 @@ const weeklySchedule: ScheduleBlock[] = [
 
 const upcomingEvents: EventItem[] = [
   {
-    date: "Dec 21",
-    title: "Christmas Party",
+    date: "Apr 19",
+    title: "Church Anniversary",
     detail:
-      "Following our worship service we'll have our christmas party for carols, testimony sharing, and a joyful dinner with the whole church family. Invite friends and neighbors.",
+      "Join us to thank God with worship, testimonies, and a fellowship lunch; invite friends.",
   },
 ];
 
@@ -139,6 +139,12 @@ const visitInfoBullets = [
 const featuredEvent = upcomingEvents[0];
 
 const pastEvents = [
+  {
+    date: "Dec 21, 2025",
+    title: "Christmas Party 2025",
+    description: "Celebrating Christ's incarnation in year 2025.",
+    imageSrc: "/christmas_party_2025.jpg",
+  },
   {
     date: "Sep 23, 2025",
     title: "Women's Fellowship",
