@@ -58,5 +58,10 @@ export const faq = {
       answer:
         "Stay for the afternoon service and fellowship on the last Sunday of the month, join Wednesday prayer at 7:00pm, or talk with Pastor Ramir and the elders about baptism, membership, or how to grow with us.",
     },
+    {
+      question: "Who do you baptize?",
+      answer:
+        "We baptize only those who voluntarily profess faith in Jesus Christ. Before baptism, we take time to examine their profession, talk with them about the gospel, and look for a life that shows a genuine desire to follow Christ. Baptism is not for infants or for those who have not personally trusted in Christ. If you want to talk about baptism, speak with Pastor Ramir and the elders.",
+    },
   ],
 } as const;
