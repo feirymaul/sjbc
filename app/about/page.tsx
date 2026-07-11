@@ -10,7 +10,7 @@ import { site } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `The story of ${site.name}: established in 1983, shepherded since 1993 by Pastor Ramir and Ellen Quijada in ${site.location}.`,
+  description: `The story of ${site.name}: begun in 1983 as San Juan First Baptist Church under Pastor Solaña, shepherded since 1993 by Pastor Ramir and Ellen Quijada in ${site.location}.`,
 };
 
 export default function AboutPage() {

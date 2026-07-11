@@ -10,36 +10,37 @@ interface TimelineProps {
   markerClassName?: string;
 }
 
+/**
+ * Timeline with a single continuous vertical line in a fixed-width rail.
+ * Dots are centered on that line (same column), so alignment stays reliable.
+ */
 export function Timeline({
   blocks,
   markerClassName = "bg-bg",
 }: TimelineProps) {
   return (
     <ol className="relative m-0 list-none p-0">
+      {/* One continuous line through the rail (w-4 = 1rem, center at 0.5rem) */}
+      <span
+        className="pointer-events-none absolute bottom-3 left-[0.4375rem] top-3 w-px bg-accent/40"
+        aria-hidden
+      />
+
       {blocks.map((block, index) => {
         const isLast = index === blocks.length - 1;
         return (
-          <li key={block.title + block.range} className="relative flex gap-4">
-            {/*
-              Rail stretches to full row height (including content padding/gap)
-              so the connector runs continuously between dots.
-            */}
-            <div className="relative flex w-4 shrink-0 flex-col items-center self-stretch">
-              {!isLast && (
-                <span
-                  className="absolute bottom-0 left-1/2 top-4 w-px -translate-x-1/2 bg-accent/40"
-                  aria-hidden
-                />
-              )}
+          <li
+            key={block.title + block.range}
+            className={`relative flex gap-4 ${isLast ? "" : "pb-10"}`}
+          >
+            <div className="relative z-10 flex w-4 shrink-0 justify-center">
               <span
-                className={`relative z-10 mt-1 h-3.5 w-3.5 shrink-0 rounded-full border-2 border-accent ${markerClassName}`}
+                className={`mt-1 h-3.5 w-3.5 shrink-0 rounded-full border-2 border-accent ${markerClassName}`}
                 aria-hidden
               />
             </div>
 
-            <div
-              className={`min-w-0 flex-1 pt-0.5 ${isLast ? "pb-0" : "pb-10"}`}
-            >
+            <div className="min-w-0 flex-1 pt-0.5">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
                 {block.range}
               </p>
