@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero } from "@/components/layout/PageHero";
 import { Button } from "@/components/ui/Button";
 import { PhotoCard } from "@/components/ui/PhotoCard";
@@ -6,6 +7,8 @@ import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { getActiveUpcomingEvents, pastEvents } from "@/content/events";
 import { site } from "@/content/site";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Events",
@@ -38,15 +41,34 @@ export default function EventsPage() {
               {upcoming.map((event) => (
                 <article
                   key={event.title + event.date}
-                  className="rounded-2xl border border-line bg-surface p-6 shadow-sm shadow-ink/5"
+                  className="flex flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-sm shadow-ink/5 sm:flex-row"
                 >
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
-                    {event.date}
-                  </p>
-                  <h2 className="mt-2 font-serif text-2xl font-semibold text-ink">
-                    {event.title}
-                  </h2>
-                  <p className="mt-2 text-muted">{event.detail}</p>
+                  {event.imageSrc && (
+                    <a
+                      href={event.imageSrc}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Open full-size ${event.title} flyer`}
+                      className="relative block aspect-square w-full shrink-0 overflow-hidden bg-accent-soft sm:w-80"
+                    >
+                      <Image
+                        src={event.imageSrc}
+                        alt={`${event.title} flyer`}
+                        fill
+                        sizes="(max-width: 640px) 100vw, 320px"
+                        className="object-cover"
+                      />
+                    </a>
+                  )}
+                  <div className="p-6">
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
+                      {event.date}
+                    </p>
+                    <h2 className="mt-2 font-serif text-2xl font-semibold text-ink">
+                      {event.title}
+                    </h2>
+                    <p className="mt-2 text-muted">{event.detail}</p>
+                  </div>
                 </article>
               ))}
             </div>
