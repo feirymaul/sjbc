@@ -150,7 +150,7 @@ export default function HomePage() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-line bg-accent-soft">
               <Image
                 src={about.shepherds.imageSrc}
-                alt={`${about.shepherds.name} and ${about.shepherds.wifeName}`}
+                alt={`${about.shepherds.name} with his wife ${about.shepherds.wifeName}`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"

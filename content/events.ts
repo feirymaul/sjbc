@@ -41,7 +41,7 @@ export const pastEvents: PastEvent[] = [
   {
     date: "Apr 26, 2026",
     title: "22nd Church Anniversary",
-    description: "Our church family gathered to give thanks for 22 years together.",
+    description: "Giving thanks to God for 22 years since the church's 2004 reform.",
     imageSrc: "/22nd-church-anniversary-2026.jpg",
   },
   {
@@ -73,7 +73,8 @@ export const pastEvents: PastEvent[] = [
   {
     date: "Apr 27, 2025",
     title: "21st Church Anniversary",
-    description: "With guest speaker Ptr. Joebel Casiple from Talibon Baptist Church.",
+    description:
+      "Giving thanks to God for 21 years since the church's 2004 reform. Ptr. Joebel Casiple from Talibon Baptist Church spoke.",
     imageSrc: "/21st-church-anniversary-v3.jpg",
   },
   {

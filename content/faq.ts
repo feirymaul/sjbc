@@ -31,7 +31,7 @@ export const faq = {
     {
       question: "What language do you use during services?",
       answer:
-        "Most of our gathering is in Cebuano with English woven throughout so visitors can follow along.",
+        "Our services are mainly in Cebuano, with some English. Ask us if you need help following along.",
     },
     {
       question: "What kind of worship music should I expect?",
