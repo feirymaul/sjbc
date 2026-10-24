@@ -10,7 +10,7 @@ import { site } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `The story of ${site.name}: begun in 1983 as San Juan First Baptist Church under Pastor Solaña, shepherded since 1993 by Pastor Ramir and Ellen Quijada in ${site.location}.`,
+  description: `The story of ${site.name}: established in 1983 in ${site.location}, reformed in 2004, and served by Pastor Ramir Quijada since 1993.`,
 };
 
 export default function AboutPage() {
@@ -49,7 +49,7 @@ export default function AboutPage() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-line bg-accent-soft">
               <Image
                 src={about.shepherds.imageSrc}
-                alt={`${about.shepherds.name} and ${about.shepherds.wifeName}`}
+                alt={`${about.shepherds.name} with his wife ${about.shepherds.wifeName}`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -61,7 +61,7 @@ export default function AboutPage() {
                 {about.shepherds.label}
               </p>
               <h2 className="mt-3 font-serif text-3xl font-semibold text-ink sm:text-4xl">
-                {about.shepherds.name} &amp; {about.shepherds.wifeName}
+                {about.shepherds.name}
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-muted">
                 {about.shepherds.description}

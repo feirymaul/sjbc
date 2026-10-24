@@ -7,7 +7,7 @@ export const visit = {
     items: [
       {
         title: "Language",
-        body: "Main gathering in Cebuano with English woven throughout so guests can follow the songs, Scripture, and sermon.",
+        body: "Our services are mainly in Cebuano, with some English. Ask us if you need help following along.",
       },
       {
         title: "Dress & length",

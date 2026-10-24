@@ -5,8 +5,8 @@ export const home = {
     subheading:
       "A church family in Maite, Siquijor, gathering each Lord's Day to hear God's Word, worship Christ, and care for one another.",
     cardLabel: "Visit us",
-    cardTitle: "Maite, San Juan",
-    cardNote: "Kids and guests are welcome. Full gathering times are listed just below.",
+    cardTitle: "Join us this Lord's Day",
+    cardNote: "We meet in Maite, San Juan. See gathering times below and directions on our Visit page.",
     cardLinkText: "Plan your visit →",
   },
   newHere: {
@@ -21,7 +21,7 @@ export const home = {
       },
       {
         title: "Language",
-        body: "Most of our gathering is in Cebuano, with English woven throughout so visitors can follow along.",
+        body: "Our services are mainly in Cebuano, with some English. Ask us if you need help following along.",
         href: "/faq",
         linkText: "More guest questions →",
       },
@@ -43,8 +43,8 @@ export const home = {
     body: "The Bible is our final authority. We also hold the 1689 Confession as a clear summary of the faith, and we love to make the gospel plain.",
   },
   shepherd: {
-    label: "Our shepherds",
-    heading: "Pastor Ramir & Ellen",
-    body: "Since 1993 they have shepherded SJBC through preaching, pastoral care, and long faithfulness on Siquijor, serving together.",
+    label: "Our pastor",
+    heading: "Pastor Ramir Quijada",
+    body: "Pastor Ramir has preached and cared for SJBC since 1993. Ellen has served alongside him throughout those years.",
   },
 } as const;
